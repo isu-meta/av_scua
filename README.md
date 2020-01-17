@@ -2,36 +2,38 @@
 AV_SCUA
 ========
 
-AV_SCUA is a Django-based API and interface for searching and editing Iowa State University's audio-visual catalog. 
+AV_SCUA is a catalog of audio-visual materials held in the Iowa State
+University Library's Special Collections and Archives built with Django
+and the Django REST framework.
 
-Getting Started
+Developer set up
 ----------------
 
 ``` {.sourceCode .console}
-$ git clone https://github.com/wryan14/av_scua.git
-$ cd av_scua
-$ conda create -n "av_scua_env" python=3.7
-$ pip install requirements.txt
+> git clone https://github.com/isu-meta/av_scua.git
+> cd av_scua
+> python -m venv env_av_scua
+> env_av_scua\
+> pip install -r requirements.txt
+> pip install -r requirements-dev.txt
 ```
 
-With the environment created, run the django development
-server in the typical fashion.
+
+With the environment created, run the Django development server.
 
 ``` {.sourceCode .console}
-$ python manage.py runserver
+> python manage.py runserver
 ```
 
-Changing Filters
+Changing filters
 -----------------
 
 To change the filterable fields, navigate to [dtable.html](templates/basic/dtable.html) and modify the javascript generated table data:
 
-
-> ``` {.sourceCode .javascript}
+``` {.sourceCode .javascript}
 > '<td align="right" width="150">UID:</td>'+
 > '<td>'+d.uid+'</td>'+
-> ```
-
+```
 
 Documentation
 --------------
